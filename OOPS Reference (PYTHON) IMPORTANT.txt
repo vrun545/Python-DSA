@@ -1,0 +1,281 @@
+-------------------------------------------------------------------
+
+pop() function pops out 1st element in set and last element in list.
+
+--------Reversing a dict--------------
+
+a={"a":1,"b":2,"c":3}
+b=dict(zip(a.values(),a.keys())pop()            #keys and values will interchange in this method
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+--- #function is an object in python
+adds = addition()
+print(adds)                 #prints the object where it's located(Address)
+print(adds())               #calling the function
+
+During function overloading only last function definition will be considered rest will be discarded.
+
+During returning multiple values in python values will returned in the form of tuple.
+
+Pyhton has no concept of call by value and call by reference instead it works on mutability of data.
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+---------------------------- OOP's Concept in PYTHON -------------------------------------------------------
+
+step1 - It simulates the real world scenario.
+step2 - Identify the classification of objects.
+step3 - Abstraction.
+
+example - marker
+  --attributes  -  dimensions, color, metarial used etc.
+  --methods  -  writing(), refill(), opencap(), closecap()
+
+---------------------------------------------------------------------------------------------------------------
+
+UML class diagram: unified modelling language
+
+access modifiers
+getter
+setter
+
+-------------------------------------------------------------------------------------------------------------
+class mobile:
+   pass
+
+mob1=mobile() #first instance
+mob2=mobile() #second instance
+
+mob1.brand="Apple"
+mob1.price=20000
+mob1.camera=3
+mob2.brand="Samsung"
+mob2.price=7000
+print(mob1.brand)  
+print(mob2.price)
+
+---------------------------------------------------------------------------------------------------------------
+
+#3 points about __init__()
+1.__init__()(constructor) is used to create and intialize the instance variables or an attributes of an object of a class.
+2. it is automatically called at the time of object creation.
+3.if self is mentioned then it is instance variable otherwise it will be local variable. 
+
+m1=Mobile("Apple",9000)     #Mobile is a class
+print(Mobile("Nokia",6000).brand)   #another way to access object attribute
+-------------------------------------------------------------------------------------------------------
+
+There are 3 types of variables in a class.
+1.Instance
+2.Class/Static
+3.Local
+
+---------------------------------------------------------------------------------------------------------
+
+instance variable are part of object,not a class.
+object attribute is same as instance variable.
+
+--------------------------------------------------------------------------------------------------------
+
+
+class/static variables are associated with class not object.
+class variables are initialised only out side of the function.
+class/static variables are shared among all objects.
+class/static variables are accessed only by class name.
+
+
+---------------------------------------------------------------------------------------------------------
+
+"__" (double underscore) means private member
+"_" (single underscore) means protected member
+no underscore indicates public member
+
+--------------------------------------------------------------------------------------------------------
+
+# getter and setter functions are used to access and modify values of private members.
+
+---------------------------------------------------------------------------------------------------------
+
+class Mobile:
+"'This is a class of Mobile"'   #doc string
+   count = 0                            #static/class variable       #this will be shared among all objects of the class.
+   def __init__(self,brand,price):
+      self.__brand = brand
+      self.__price = price
+
+  def access_brand(self):    #getter function
+   return self.__brand
+
+  def set_price(self,pv):    #setter function
+   self.__price=pv
+
+  def get_price(self):
+   return self.__price
+
+m1=Mobile("Apple",9000)
+print(m1.access_brand())   #calling getter function
+m1.set_price(12000)        #calling setter function       |     #m1=self and pv=12000
+print(m1.get_price())
+mob2 = Mobile("oppo",2500)
+print(Mobile.count)        #prints 3
+print(mob2.count)          #prints 3
+print(m1._Mobile__brand) #Name Mangling     # we can access private members of class.
+print(Mobile.__doc__)  #prints documentation or doc string of the class
+
+-------------------------------------------------------------------------------------------------------
+
+zip function returns a iterartor function.
+
+@staticmethod is decorator.
+1.there is no comuplsory argument in static method.
+2.static method can't change/update the state variables of an object.
+3.static method can change the static variable.
+
+setter function --> mutator function
+getter function --> accessor function
+
+instance method associated with an instance of a class which has self as a compulsory argument.
+classmethod() is associated with the class as well as the objects of the class.
+classmethod() should have one compulsory argument as the name of class. By convention it is written as "cls".
+classmethod() should be use to access & modify the class state.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-------------------METHODS TO ACCESS PRIVATE MEMBERS
+
+METHOD 1 IS USING GETTER AND SETTER FUNCTION 
+
+----------------------------METHOD1--------------
+---We can access private members from outside of a class by creating public method to access private members.
+class Employee:
+    def __init__(self, name, employeeId, salary):
+        self.name = name          # making employee name public
+        self._empID = employeeId  # making employee ID protected
+        self.__salary = salary    # making salary private
+
+    def getSalary(self):
+        print(f"The salary of Employee is {self.__salary}")
+
+employee1 = Employee("John Gates", 110514, "$1500")
+
+print(f"The Employee's name is {employee1.name}")
+print(f"The Employee's ID is {employee1._empID}")   # This will throw error
+employee1.getSalary()  # will be able to access the employee's salary now using the getter method
+
+-----------------------------------------------METHDO2-------------------------------------------------------------
+There is one more method to get access called name mangling.
+# Python program to demonstrate.
+# name mangling
+
+class Student:
+	def __init__(self, name):
+		self.__name = name
+
+s1 = Student("Santhosh")
+print(s1._Student__name)
+
+
+----------------------------------------------------------------------------------------------------------------------------
+
+#-------------------------------Multiple Constructor Concept in Python--------------------------------------------------------------------------------------
+
+class demo:
+    def __init__(self,*var):     # constructor
+        if len(var)==2:
+            self.name, self.age = var     # var is a tuple
+        elif len(var) == 1:
+            self.name = var[0]
+            self.age = eval(input("Enter age"))
+        else:
+            self.name = input("Enter name")
+            self.age = eval(input("Enter age")) 
+                      
+d1=demo("ram",20)
+d2=demo("shyam")
+d3=demo()
+
+print(d1.name,d1.age)
+print(d2.name,d2.age)
+print(d3.name,d3.age)
+
+--------------------------------------------------------------------------------------------------------------
+
+There are 3 types of relationship:
+1. Is-A (inheritance)
+2. Has-A (aggregation)
+3. Uses-A (association)
+
+----------------------------------------------------------------------------------------------
+
+There are 5 types if inheritance in python
+1.Single LEvel
+2.Multi-Level
+3.Hybrid
+4.Heirarrichal
+5.Multiple
+
+---------method resolution order (mro)----------
+
+print(Child.mro())
+Bottom up Left to Right
+
+MRO METHOD is the reason that problems like Diamond Problem doesn't take place in Python. 
+
+-----------------------------------------------------------------------
+
+class A(B,C):    # In this case B will automatically Inherit C.
+
+----------------------------------------------------------------------
+
+Abstract Class can't be initiated.
+Abstract Class are only meant for inheriting.
+Every child class should compulsarily overide the abstract methods of parent class.
+An abstract class may also have abstract class or method also.
+An abstract class may have 0 or more no. of abstract methods. 
+
+-----------------------------EXAMPLE----------------------------------
+# Python program invoking a
+# method using super()
+
+import abc
+from abc import ABC, abstractmethod
+
+class R(ABC):
+	def rk(self):
+		print("Abstract Base Class")
+
+class K(R):
+	def rk(self):
+		super().rk()
+		print("subclass ")
+
+# Driver code
+r = K()
+r.rk()
+
+---------------------------------------------------------------------
+
+Association:
+Its a relationship between two classes and that relationship is established through their objects. Each object has its own life cycle and there is no owner object. It is a weak type of relationship. It can be one-to-one, one-to-many, many-to-one, or many-to-many.
+
+There are special types of ASSOCIATION ( Has-a ) relationship
+
+1.Aggregation - 
+part and whole relationship. In Aggregation, child objects have their own lifecycle which means if the parent object is deleted then all child objects can exist independently. But there is child ownership in Aggregation which means if the parent object is deleted then the child object can exist independently but it can’t belong to another parent class object. Aggregation is a weaker relationship.
+
+Ex:- A team has player
+:player is a part of team
+:however if the team is dissolved .player still exist.
+:Team <aggregation> player
+
+2.Composition - 
+"part-of" kind of relationship, is limited to the life time of the whole.In Composition child class object is strongly dependent on the parent class object which means if the parent object is deleted then all child objects will also be deleted. Composition is a stronger relationship.
+
+Ex:- Building has rooms.
+:building made up of room. if the building is destroyed or collapsed. Rooms are destroyed.
+:building <composition> rooms
+
+---------------------------------------------------------------------------
+
+# Python uses a concept of reference count for automatic garbage collection as soon as the reference count of an object becomes zero 
+and special method __del__() is called which will delete the object from memory.

@@ -1,0 +1,1767 @@
+#This is a comment
+
+"""triple quotes are used for multiline
+string but if it is not assigned to a
+variable it acts as a multiline comment"""
+
+#Outputting
+print("Hello, World")
+
+#Variables
+x = 5
+print(x)
+
+y = 4       # y is of type int
+y = "Sally" # y is now of type str
+print(y)
+
+#String
+x = "John"  #both are same
+y = 'John'
+print(x)
+print(y)
+
+#Case Sentivity
+a = 4          #two different variables
+A = "Sally"
+
+#Variable Naming Techniques
+#Camel case[
+myVariableName = "John"
+
+#Pascal case
+MyVariableName = "John"
+
+#Snake case
+my_variable_name = "John"
+
+#Many Values to Multiple Variables
+x, y, z = "Orange", "Banana", "Cherry"
+print(x)
+print(y)
+print(z)
+
+#One Value to Multiple Variables
+x = y = z = "Orange"
+print(x)
+print(y)
+print(z)
+
+#Unpack a Collection
+#distribute values from a collection to variables
+fruits = ["apple", "banana", "cherry"]
+x, y, z = fruits
+print(x)
+print(y)
+print(z)
+
+#Output Variables
+x = "awesome"
+print("Python is " + x)   #operator: +(concatenation)
+
+#add one variable into another
+x = "Python is "
+y = "awesome"
+z =  x + y
+print(z)
+
+#variables with numbers
+x = 5
+y = 10
+print(x+y)    #operator: +(Mathematical addition)
+
+#Global and local variable
+x = "awesome"
+def myfunc():
+  x = "fantastic"
+  print("Python is " + x)
+myfunc()
+print("Python is " + x)
+#output: Python is fantastic, Python is awesome
+
+
+#creating global variable inside a function
+def myfunc():
+  global x      #keyword: global
+  x = "fantastic"
+myfunc()
+print("Python is " + x)
+#output: Python is fantastic
+
+#changing global variable inside a function
+x = "awesome"
+def myfunc():
+  global x
+  x = "fantastic"
+myfunc()
+print("Python is " + x)
+#output: Python is fantastic
+
+#Data types
+Text Type:	str
+Numeric Types:	int, float, complex
+Sequence Types:	list, tuple, range
+Mapping Type:	dict
+Set Types:	set, frozenset
+Boolean Type:	bool
+Binary Types:	bytes, bytearray, memoryview
+
+#getting data type
+x = 5       #function: type()
+print(type(x))
+
+#setting data type
+x = float(20.5)  #function: float()
+print(x)
+
+#Numbers
+x = 1    # int
+y = 2.8  # float
+z = 3+5j   # complex
+print(type(x))
+print(type(y))
+print(type(z))
+
+#Type conversion
+#convert from int to float:
+a = float(x)  #function: float()
+#convert from float to int:
+b = int(y)    #function: int()
+#convert from int to complex:
+c = complex(x) #function: complex()
+
+print(a)
+print(b)
+print(c)
+
+#Casting
+x = float(1)     # x will be 1.0
+y = str(2.8)     # y will be '2.8'
+z = int("3")     # z will be 3
+
+#Strings
+#string methods doesnt change the original string
+a = "Hello"
+print(a)
+
+#multiline string
+a = '''Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua.'''
+print(a)
+
+#accessing element of a string
+a = "Hello, World!" #index starts at 0
+print(a[1])       #square brackets[]
+
+#looping through a string
+for x in "banana":
+  print(x)
+
+#srting length
+a = "Hello, World!"
+print(len(a))     #function: len()
+
+#check element in string
+#element is present in string
+txt = "The best things in life are free!"
+print("free" in txt)  #keyword: in
+
+#element is not present in the string
+print("expensive" not in txt)   #keyword: not in
+
+#Slicing string
+#return a range of characters by using the slice syntax
+b = "Hello, World!"
+print(b[2:5])   #syntax:[:],first index is included, last index is excluded
+
+#slicing from the start
+print(b[:5])    #no first index: start
+
+#slice to the end
+print(b[2:])    #no last index: end
+
+#negative indexing
+print(b[-5:-2]) #to start from the end
+
+#Modify strings
+#convert into upper case
+a = "Hello, World!"
+print(a.upper())    #function: upper()
+
+#convert into lower case
+print(a.lower())    #function: lower()
+
+#to remove whitespace from start and end
+print(a.strip())    #function: strip()
+
+#replace an element with another
+print(a.replace("o", "J"))  #function: replace()
+                    #replaces the first argument in all places with the second one
+
+#split string w.r.t separator
+print(a.split(",")) # returns ['Hello', ' World!']
+                    #function: split()
+
+#string concatenation
+a = "Hello"
+b = "World"
+c = a + " " + b
+print(c)
+
+#format strings
+#function: format()
+#provide numbers as arguments and specify index in string(optional)
+age = 36
+txt = "My name is John, and I am {}"
+print(txt.format(age))
+
+quantity = 3
+itemno = 567
+price = 49.95
+myorder = "I want {} pieces of item {} for {} dollars."
+print(myorder.format(quantity, itemno, price))
+
+myorder = "I want to pay {2} dollars for {0} pieces of item {1}."
+print(myorder.format(quantity, itemno, price))
+
+#named indexes
+myorder = "I have a {carname}, it is a {model}."
+print(myorder.format(carname = "Ford", model = "Mustang"))
+
+#Escape character
+#character: \
+txt = "We are the so-called \"Vikings\" from the north."
+print(txt)
+#for newline: \n
+
+#string methods
+#Check Documentation
+
+#Booleans
+#function: bool(), returns bool value
+#Most Values are True
+#Almost any value is evaluated to True if it has some sort of content.
+#Any string is True, except empty strings.
+#Any number is True, except 0.
+#Any list, tuple, set, and dictionary are True, except empty ones.
+print(bool("abc"))
+print(bool(123))
+print(bool(["apple", "cherry", "banana"]))
+
+
+#Some Values are False
+#In fact, there are not many values that evaluate to False, except empty values, such as (), [], {}, "", the number 0, and the value None.
+#And of course the value False evaluates to False.
+print(bool(False))
+print(bool(None))
+print(bool(0))
+print(bool(""))
+print(bool(()))
+print(bool([]))
+print(bool({}))
+
+#conditional code
+def myFunction() :
+  return True
+if myFunction():
+  print("YES!")
+else:
+  print("NO!")
+
+#operators
+#arithmetic operator
+x = 5
+y = 2
+print(x + y)    #addition
+print(x - y)    #subtraction
+print(x * y)    #multiplication
+print(x / y)    #division
+print(x % y)    #modulus
+print(x ** y)   #exponentiation
+print(x // y)   #floor division
+
+#Assignment operators
+x = 5
+x += 3  #same as: x = x + 3
+x -= 3  #same as: x = x - 3, so on
+x *= 3
+x /= 3
+x %= 3
+x //= 3
+x **= 3
+x &= 3
+x |= 3
+x ^= 3
+x >>= 3
+x <<= 3
+
+#Comparision operators
+x = 5
+y = 3
+
+print(x == y)   #equal
+print(x != y)   #not equal
+print(x > y)    #greater than
+print(x < y)    #less than
+print(x >= y)   #greater than or eqaul to
+print(x <= y)   #less than or equal to
+
+#logical operators
+x = 5
+
+print(x > 3 and x < 10) #and
+print(x < 5 or x < 4)   #or
+print(not(x > 3 and x < 10))    #not    # returns False because not is used to reverse the result
+
+#identity operators
+x = ["apple", "banana"]
+y = ["apple", "banana"]
+z = x
+
+#is
+print(x is z)
+# returns True because z is the same object as x
+print(x is y)
+# returns False because x is not the same object as y, even if they have the same content
+
+#is not
+print(x is not z)
+# returns False because z is the same object as x
+print(x is not y)
+# returns True because x is not the same object as y, even if they have the same content
+
+#membership operator
+x = ["apple", "banana"]
+
+print("banana" in x)    #in
+print("pineapple" not in x) #not in
+
+#bitwise
+#check docs
+
+#collection data type(Arrays): used to store collection of data
+#Lists
+thislist = ["apple", "banana", "cherry"]
+print(thislist)
+
+#list items: are ordered, changable
+print(thislist[2])
+
+#duplicates are allowed
+thislist = ["apple", "banana", "cherry", "apple", "cherry"]
+print(thislist)
+
+#list length
+print(len(thislist))    #function: len()
+
+#list item can be of any type
+list1 = ["abc", 34, True, 40, "male"]
+
+print(type(list1))  #type: list
+
+#list using the list() constructor
+thislist = list(("apple", "banana", "cherry")) # note the double round-brackets
+print(thislist)
+
+
+#access list items
+thislist = ["apple", "banana", "cherry"]
+print(thislist[1])  #use []
+print(thislist[-1]) #negative indexing: -1 = last item
+print(thislist[2:5])    #element at 2, 3 and 4 index is printed, last index item is excluded
+print(thislist[:4]) #no first index: start from 0 index
+print(thislist[2:]) #no last index: end at last item
+print(thislist[-4:-1])  #- index: start from end, last item index = -1
+
+#check for item
+if "apple" in thislist:
+  print("Yes, 'apple' is in the fruits list")
+
+#change list item
+thislist = ["apple", "banana", "cherry"]
+#change item value
+thislist[1] = "blackcurrant"
+#change range of item values
+thislist[1:3] = ["blackcurrant", "watermelon"]
+#If you insert less/more items than you replace, the new items will be inserted where you specified, and the remaining items will move accordingly
+thislist[1:2] = ["blackcurrant", "watermelon"]
+#no. of item are more so instead of replacing it will insert the given list from the starting index specified
+thislist[1:3] = ["watermelon"]
+#function: insert()
+thislist.insert(2, "watermelon")    #insert(index,itemtoinsert)
+print(thislist)
+
+#Add list items
+thislist = ["apple", "banana", "cherry"]
+
+#to add item at end, function: append()
+thislist.append("orange")   #append(item)
+
+#to add one list into another, function: extend()
+tropical = ["mango", "pineapple", "papaya"]
+thislist.extend(tropical)   #list1.extend(list2)
+#any iterable object can be added to a list using extend()
+thistuple = ("kiwi", "orange")
+thislist.extend(thistuple)
+print(thislist)
+
+#remove list items
+thislist = ["apple", "banana", "cherry"]
+
+#to remove a specified item, function: remove()
+thislist.remove("banana")   #remove(item)
+
+#remove element using index, function: pop()
+thislist.pop(1) #pop(indexofitem)
+#if no index is specified last item is removed
+
+#remove element using del, keyword: del
+del thislist[1] #provide item using index along with del to remove
+del thislist    #deletes the entire list
+
+#clear the list
+thislist.clear()    #clear the content: empty list
+
+print(thislist)
+
+#loop through a list
+thislist = ["apple", "banana", "cherry"]
+
+#using for loop
+for x in thislist:
+  print(x)
+
+#looping using index number
+for i in range(len(thislist)):
+  print(thislist[i])    #The iterable created in the example above is [0, 1, 2].
+
+#using while loop
+i = 0
+while i < len(thislist):
+  print(thislist[i])
+  i = i + 1
+
+#using list comprehension
+[print(x) for x in thislist]    #short hand for for loop
+
+#list comprehension
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = [x for x in fruits if "a" in x]   #creates a new list using the provided condition
+print(newlist)
+
+#syntax
+#newlist = [expression for item in iterable if condition == True]
+#The return value is a new list, leaving the old list unchanged.
+newlist = [x for x in fruits]   #condition is optional
+print(newlist)
+
+#create an iterable using range()
+newlist = [x for x in range(10) if x < 5]
+
+#Sort lists
+thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+thislist1 = [100, 50, 65, 82, 23]
+
+#sorting is done in alphanumerically ascending order
+thislist.sort()
+thislist1.sort()
+
+#sort in descending order using, keyword argument: reverse = True
+thislist.sort(reverse = True)
+thislist1.sort(reverse = True)
+
+#uppercase letters are sorted first
+#for case insensitive sort
+thislist.sort(key = str.lower)  #key function: key = str.lower
+
+#reverse list regardless of alphabets
+thislist.reverse()  #function: reverse()
+
+print(thislist)
+print(thislist1)
+
+#copy lists
+#cannot be done directly
+thislist = ["apple", "banana", "cherry"]
+
+#copy using function: copy()
+mylist = thislist.copy()
+
+#using function: list()
+mylist = list(thislist)
+
+print(mylist)
+
+#join two list
+list1 = ["a", "b", "c"]
+list2 = [1, 2, 3]
+
+#using + operator
+list3 = list1 + list2
+print(list3)
+
+#appending all the item from list2 to list1
+for x in list2:
+  list1.append(x)
+print(list1)
+
+#using function: extend()
+list1.extend(list2)
+print(list1)
+
+#Tuples
+thistuple = ("apple", "banana", "cherry")
+
+#tuple items
+#tuple items are ordered,unchangeable
+#allow duplicates
+thistuple = ("apple", "banana", "cherry", "apple", "cherry")
+
+#tuples are indexed
+print(thistuple[1])
+
+#tuple length, function: len()
+print(len(thistuple))
+
+#tuple with one item
+#you have to add a comma at the end
+#NOT a tuple: thistuple = ("apple")
+thistuple = ("apple",)
+
+#tuple items data types: any
+tuple1 = ("abc", 34, True, 40, "male")
+
+#type of tuple: tuple
+print(type(thistuple))
+
+#tuple using tuple() constructor
+thistuple = tuple(("apple", "banana", "cherry"))
+# note the double round-brackets
+
+print(thistuple)
+
+#Access tuple items
+thistuple = ("apple", "banana", "cherry")
+
+#using index number
+print(thistuple[1])
+
+#using negative index
+print(thistuple[-1])    #last item
+
+#using a range of index
+thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
+#The search will start at index 2 (included) and end at index 5 (not included).
+print(thistuple[2:5])
+
+#selecting items from start
+print(thistuple[:4])
+
+#selecting items till end
+print(thistuple[2:])
+
+#using range and negative index
+print(thistuple[-4:-1])
+#4th item from end till end excluding last item
+
+#check for item
+if "apple" in thistuple:
+  print("Yes, 'apple' is in the fruits tuple")
+
+#update tuples
+#tuples are immutable thus  we cannot change them
+#for doing so we can workaround and convert the tuple into a list change the list and convert it back to the tuple
+
+#change item
+x = ("apple", "banana", "cherry")
+y = list(x)
+y[1] = "kiwi"
+x = tuple(y)
+print(x)
+
+#add item
+thistuple = ("apple", "banana", "cherry")
+y = list(thistuple)
+y.append("orange")
+thistuple = tuple(y)
+print(thistuple)
+
+#remove item
+thistuple = ("apple", "banana", "cherry")
+y = list(thistuple)
+y.remove("apple")
+thistuple = tuple(y)
+print(thistuple)
+
+#delete item
+del thistuple
+print(thistuple)
+#this will raise an error because the tuple no longer exists
+
+#unpack tuples
+#packing: assigning values to a tuple
+fruits = ("apple", "banana", "cherry")
+
+#unpacking: extracting values from a tuple
+(green, yellow, red) = fruits
+print(green)
+print(yellow)
+print(red)
+
+#The number of variables must match the number of values in the tuple
+#if not, you must use an asterix to collect the remaining values as a list
+fruits = ("apple", "banana", "cherry", "strawberry", "raspberry")
+(green, yellow, *red) = fruits
+print(green)
+print(yellow)
+print(red)
+
+#asterix can be assigned to any variable and python will adjust automatically
+(green, *tropic, red, blue) = fruits
+print(green)
+print(tropic)
+print(red)
+print(blue)
+
+#loop tuples
+thistuple = ("apple", "banana", "cherry")
+
+#using for loop
+for x in thistuple:
+  print(x)
+
+#loop by index number using range() and len()
+for i in range(len(thistuple)):
+  print(thistuple[i])
+
+#using while loop
+i = 0
+while i < len(thistuple):
+  print(thistuple[i])
+  i = i + 1
+
+#join tuples
+tuple1 = ("a", "b" , "c")
+tuple2 = (1, 2, 3)
+
+#using + operator
+tuple3 = tuple1 + tuple2
+print(tuple3)
+
+#multiply tuples
+#use *: to multiple the content of tuple a given number of times
+fruits = ("apple", "banana", "cherry")
+mytuple = fruits * 2
+print(mytuple)
+
+#tuple methods
+#count():	Returns the number of times a specified value occurs in a tuple
+#index():	Searches the tuple for a specified value and returns the position of where it was found
+
+#set
+thisset = {"apple", "banana", "cherry"}
+print(thisset)
+
+#set items: unordered, unchangeable(but new items can be added), unindexed and does not allow duplicates
+#duplicates are ignored
+#only immmutable elements can be a part of a set 
+thisset = {"apple", "banana", "cherry", "apple"}
+print(thisset)
+
+#length of set, function: len()
+print(len(thisset))
+
+#set item data types
+set1 = {"abc", 34, True, 40, "male"}
+
+#type of set: set
+print(type(thisset))
+
+#creating set using set() constructor
+thisset = set(("apple", "banana", "cherry"))
+# note the double round-brackets
+print(thisset)
+
+#access set items
+thisset = {"apple", "banana", "cherry"}
+
+#cannot be accessed using index
+#using for loop
+for x in thisset:
+  print(x)
+
+#check a specific item using in keyword
+print("banana" in thisset)
+
+#once a set is created the items then cannot be changed but new items can be added
+
+#add items
+thisset = {"apple", "banana", "cherry"}
+thisset.add("orange")   #function: add()
+print(thisset)
+
+#add sets
+tropical = {"pineapple", "mango", "papaya"}
+
+#function: update() -> set1.update(SetToBeAdded)
+thisset.update(tropical)
+print(thisset)
+
+#any iterable object(list, tuple etc) can be added to a set using update()
+mylist = ["kiwi", "orange"]
+thisset.update(mylist)
+print(thisset)
+
+#remove items
+thisset = {"apple", "banana", "cherry"}
+
+#using function: remove()
+thisset.remove("banana")
+#if item is not present remove() will raise an error
+print(thisset)
+
+#using function: discard()
+thisset.discard("banana")
+#if the item is not present discard() will not raise an error
+
+#using pop()
+#pop() removes the last item and its return value is the item removed
+#but a set is unordered thus the item removed is not known
+x = thisset.pop()
+print(x)
+print(thisset)
+
+#empty the set, function: clear()
+thisset.clear()
+print(thisset)
+
+#delete the set, keyword: del
+del thisset
+print(thisset)
+
+#loop sets
+thisset = {"apple", "banana", "cherry"}
+
+#using for loop
+for x in thisset:
+  print(x)
+
+#join sets
+set1 = {"a", "b" , "c"}
+set2 = {1, 2, 3}
+
+#using union()			# | can also be used instead of union
+set3 = set1.union(set2)
+print(set3)
+
+#using update()
+set1.update(set2)
+print(set1)
+
+#keep only duplicates, common items
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+#using function: intersection_update()
+x.intersection_update(y)
+print(x)
+
+#using intersection(){a new set is returned}	#& can also be used instead of intersection
+z = x.intersection(y)
+print(z)
+
+#difference()		#returns a new set
+x.difference(y)		# - can also be used instead of difference
+
+#difference_update()
+x.difference_update(y)
+
+#keep all but not duplicates
+#function: symmetric_difference_update()
+x.symmetric_difference_update(y)
+print(x)
+
+#using symmetric_difference(){a new set is returned}	# ^ can also be used instead of symmetric_difference
+z = x.symmetric_difference(y)
+print(z)
+
+#subset and superset
+set1 = {1,3,5,9}
+set2 = {1,3,5}
+set2.issubset(set1)	#returns true
+set2<=set1		#same as issubset
+set1.issuperset(set2)	#returns true
+# <= : subset
+# < : proper subset
+
+#an immutable set can be created using: frozenset()
+a = frozenset({1,2,3,4})
+b = frozenset([1,2,3,4])
+c = frozenset((1,2,3,4))	#list, tuple can be converted into an immutable set using forzenset
+type(a)				#frozenset
+type(b)				#frozenset
+type(c)				#frozenset
+
+#set method
+#check docs
+
+#dictionaries
+#used to store data in key value pair
+#Is ordered, changeable and does not allow duplicates
+#creating a dictionary
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict)
+
+#dictionary items
+#can be referred to using key name
+print(thisdict["brand"])
+
+#duplicates are not allowed
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964,
+  "year": 2020
+}
+print(thisdict)
+
+#dictionary length, function: len()
+print(len(thisdict))
+
+#dictionary items data types: any
+thisdict = {
+  "brand": "Ford",
+  "electric": False,
+  "year": 1964,
+  "colors": ["red", "white", "blue"]
+}
+
+#type of dictionary
+print(type(thisdict))
+
+#access dictionary items
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+#using key name inside []
+print(thisdict["model"])
+
+#using method: get()
+print(thisdict.get("model"))
+
+#get all the keys in a dictionary
+#method: keys()->returns a list of all keys
+print(thisdict.keys())
+
+#changes made in the dictionary are reflected by the keys()
+thisdict["color"] = "white"
+print(thisdict.keys())
+
+#get all the values in a dictionary
+#method(): values->returns a list of all the values
+print(thisdict.values())
+
+#changes made are reflected by values
+thisdict["year"] = 2020
+print(thisdict.values())
+
+#using method: items()
+#items() return each item in a dictionary as a tuple in a list
+print(thisdict.items())
+#any change made is reflected by items()
+
+#check if key exists
+if "model" in thisdict:
+  print("Yes, 'model' is one of the keys in the thisdict dictionary")
+
+#change values
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+#using key name
+thisdict["year"] = 2018
+print(thisdict)
+
+#using method: update()
+#updates item from the given argument
+#arguments must be a dictionary or an iterable object with key value pairs
+thisdict.update({"year": 2020})
+print(thisdict)
+
+#add items
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+#using a new index key and assigning it a value
+thisdict["color"] = "red"
+print(thisdict)
+
+#using update()
+thisdict.update({"color": "white"})
+print(thisdict)
+
+#remove items
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+#using pop(): removes item with specified key
+thisdict.pop("model")
+print(thisdict)
+
+#using popitem(): last item is removed
+thisdict.popitem()
+print(thisdict)
+
+#using del keyword: removes item with specified key
+del thisdict["model"]
+print(thisdict)
+
+#del entire dictionary
+del thisdict
+print(thisdict)
+
+#empty the dictionary
+thisdict.clear()
+print(thisdict)
+
+#loop dictionary
+#when looping through a dictionary the returned value are the keys
+#To get corresponding values we use some methods
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+#using for loop
+for x in thisdict:
+  print(x)
+
+#print values
+for x in thisdict:
+  print(thisdict[x])
+
+#using values() to print value directly
+for x in thisdict.values():
+  print(x)
+
+#using keys() to get keys
+for x in thisdict.keys():
+  print(x)
+
+#loop through both using items
+for x, y in thisdict.items():
+  print(x, y)
+
+#copying a dictionary
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+#using method: copy()
+mydict = thisdict.copy()
+print(mydict)
+
+#using function: dict()
+mydict = dict(thisdict)
+print(mydict)
+
+#nested dictionaries
+#dictionary with a dictionary inside it
+kids = {
+  "child1" : {
+    "name" : "Emil",
+    "year" : 2004
+  },
+  "child2" : {
+    "name" : "Tobias",
+    "year" : 2007
+  },
+  "child3" : {
+    "name" : "Linus",
+    "year" : 2011
+  }
+}
+print(kids)
+
+#other way
+child1 = {
+  "name" : "Emil",
+  "year" : 2004
+}
+child2 = {
+  "name" : "Tobias",
+  "year" : 2007
+}
+child3 = {
+  "name" : "Linus",
+  "year" : 2011
+}
+
+kids = {
+  "child1" : child1,
+  "child2" : child2,
+  "child3" : child3
+}
+print(kids)
+
+#dictionary methods
+#check docs
+
+#Conditions and if statements
+#if statement
+a = 33
+b = 200
+if b > a:
+  print("b is greater than a")
+
+#if else statement
+a = 200
+b = 33
+if b > a:
+  print("b is greater than a")
+else:
+  print("b is not greater than a")
+
+#elif statement
+a = 33
+b = 33
+if b > a:
+  print("b is greater than a")
+elif a == b:
+  print("a and b are equal")
+
+#if elif else ladder
+a = 200
+b = 33
+if b > a:
+  print("b is greater than a")
+elif a == b:
+  print("a and b are equal")
+else:
+  print("a is greater than b")
+
+#short hand if
+#If you have only one statement to execute
+#you can put it on the same line as the if statement.
+if a > b: print("a is greater than b")
+
+#short hand if else
+#If you have only one statement to execute, one for if, and one for else
+#you can put it all on the same line
+a = 2
+b = 330
+#ternary operators
+print("A") if a > b else print("B")	#syntax: [statement1] if [condition1] else [condition2]
+
+#for multiple else statements
+a = 330
+b = 330
+#if else chained together: if elif else ladder
+print("A") if a > b else print("=") if a == b else print("B")	#syntax: [statement1] if [condition1] else [statement2] if [condition2] else [default case]
+
+#keyword: and-> used to combine conditional statements
+a = 200
+b = 33
+c = 500
+if a > b and c > a:
+  print("Both conditions are True")
+
+#keyword: or->used to combine conditional statements
+a = 200
+b = 33
+c = 500
+if a > b or a > c:
+  print("At least one of the conditions is True")
+
+#nested if
+#if statement inside of if statement
+x = 41
+if x > 10:
+  print("Above ten,")
+  if x > 20:
+    print("and also above 20!")
+  else:
+    print("but not above 20.")
+
+#pass statement
+#if statements cannot be empty
+#but if you for some reason have an if statement with no content
+#put in the pass statement to avoid getting an error
+a = 33
+b = 200
+
+if b > a:
+  pass
+
+#while loops
+#With the while loop we can execute a set of statements as long as a condition is true
+i = 1
+while i < 6:
+  print(i)
+  i += 1
+#remember to increment i, or else the loop will continue forever.
+#relevant variables are required in while loop
+#i is used as an indexing variable here
+
+#break statement
+#while loop can be stopped with a break statement even if the condition is true
+i = 1
+while i < 6:
+  print(i)
+  if i == 3:
+    break   #control will leave the loop as soon as break is encountered
+  i += 1
+
+#continue statement
+#continue statement skips the current iteration, and continue with the next
+i = 0
+while i < 6:
+  i += 1
+  if i == 3:
+    continue    #iteration for i = 3 while be skipped
+  print(i)
+
+#else statement with while loop
+#With the else statement we can run a block of code once when the condition no longer is true
+i = 1
+while i < 6:
+  print(i)
+  i += 1
+else:
+  print("i is no longer less than 6")
+#The else block will NOT be executed if the loop is stopped by a break statement.
+
+#for loops
+#With the for loop we can execute a set of statements, once for each item in a list, tuple, set etc.
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  print(x)
+#The for loop does not require an indexing variable to set beforehand
+
+#looping through a string
+for x in "banana":
+  print(x)
+
+#break statement
+#break statement stops the loop before it has looped through all the items
+for x in fruits:
+  print(x)
+  if x == "banana":
+    break
+
+#continue statement
+#continue statement skips the current iteration of the loop, and continue with the next.
+for x in fruits:
+  if x == "banana":
+    continue
+  print(x)
+
+#function: range()->returns a sequence of number starting from 0 and in increments of 1 and ends with the specified number
+#used to loop through a code block a number of times
+#syntax: range(start, endexclude, increment)
+for x in range(6):
+  print(x)  #loops 6 times starting from 0, 0 to 5
+
+#a starting value can also be provided
+for x in range(2, 6):
+  print(x)  #starts from 2 and goes upto 6 excluding 6
+
+#an increment value can also be provided
+for x in range(2, 30, 3):
+  print(x)  #increments of 3 instead of 1
+
+#else with for loop
+#code to be executed just after the loop
+for x in range(6):
+  print(x)
+else:
+  print("Finally finished!")
+#The else block will NOT be executed if the loop is stopped by a break statement.
+
+#nested loop
+#loop inside of another loop
+adj = ["red", "big", "tasty"]
+fruits = ["apple", "banana", "cherry"]
+for x in adj:
+  for y in fruits:
+    print(x, y)
+#once the inner loop is executed once then the outer loop moves onto the other iteration
+
+#pass statement
+#loop cannot be empty if you want an empty loop use pass statement to avoid error
+for x in [0, 1, 2]:
+  pass
+
+#functions
+#A function is a block of code which only runs when it is called.
+#You can pass data, known as parameters, into a function.
+#A function can return data as a result
+#A function returns none if it returns nothing
+#There is no concept of call by value or call by reference in python
+#immutable = value
+#mutable = reference
+
+#creating a function
+#keyword: def
+def function():
+    print("Hello")
+
+#calling a function: syntax->functionName()
+function()
+
+#arguments
+#Information can be passed into functions as arguments.
+def name(fname):
+    print("Hi " + fname)
+
+name("Emil")
+
+#parameter and arguments
+#A parameter is the variable listed inside the parentheses in the function definition.
+#An argument is the value that is sent to the function when it is called.
+#always provide required number of arguments
+
+#arbitary arguments: *args
+#if number of args are not fixed use *
+#the function will recieve a tuple of arguments
+def my_function(*kids):
+  print("The youngest child is " + kids[2])
+
+my_function("Emil", "Tobias", "Linus")
+
+#keyword arguments
+#syntax: key = value, this way order of args does not matter
+def my_function(child3, child2, child1):
+  print("The youngest child is " + child3)
+
+my_function(child1 = "Emil", child2 = "Tobias", child3 = "Linus")
+#prints linus
+
+#arbitary keyword arguments, **kwargs
+#use ** if number of kwargs are not fixed
+#function will recieve a dictionary of arguments
+def my_function(**kid):
+  print("His last name is " + kid["lname"])
+
+my_function(fname = "Tobias", lname = "Refsnes")
+#prints Refsnes
+
+#default parameter value
+#function with args uses default args
+def my_function(country = "Norway"):
+  print("I am from " + country)
+
+my_function("Sweden")
+my_function("India")
+my_function()
+
+#returning multiple values
+def test(a,b):
+	c=a+b
+	s=a-b
+	d=a/b
+	return c,s,d		#this will return a tuple in the exact same order
+
+#function overloading is not possible in python 
+#if multiple functions are declared with the same name the last declaration is taken into effect
+def add(a,b):			#discarded
+	return a+b		
+
+def add(a,b,c):			#this function declaration will come into effect
+	return a+b+c
+
+#nonlocal: used to declare a global variable when a function is inside of another function
+
+#passing a list as an argument
+#data types of arguments remain the same ex:list, dictionary etc
+def my_function(food):
+  for x in food:
+    print(x)
+
+fruits = ["apple", "banana", "cherry"]
+
+my_function(fruits)
+
+#return value: use return statement
+def my_function(x):
+  return 5 * x
+
+print(my_function(3))
+print(my_function(5))
+
+#pass statement
+#functions cannot be empty if you want an empty function use a pass statement
+def myfunction():
+  pass
+
+#recursion
+#function calls itself to loop through some data
+def tri_recursion(k):
+  if(k > 0):
+    result = k + tri_recursion(k - 1)
+    print(result)
+  else:
+    result = 0
+  return result
+
+print("\n\nRecursion Example Results")
+tri_recursion(6)
+
+#lambda function
+#A lambda function is a small anonymous function.
+#A lambda function can take any number of arguments, but can only have one expression.
+#syntax: lambda arguments : expression
+x = lambda a : a + 10	
+print(x(5))
+
+#any number of args are allowed
+x = lambda a, b, c : a + b + c
+print(x(5, 6, 2))
+
+#Use lambda functions when an anonymous function is required for a short period of time.
+def myfunc(n):
+  return lambda a : a * n
+
+mydoubler = myfunc(2)
+mytripler = myfunc(3)
+
+print(mydoubler(11))
+print(mytripler(11))
+
+#Arrays: no built in support in python
+#An array can hold many values under a single name, and you can access the values by referring to an index number.
+#using lists as array
+cars = ["Ford", "Volvo", "BMW"]
+
+#access elements
+x = cars[0]
+
+#change element
+cars[0] = "Toyota"
+
+#length of array, function: len()
+print(len(cars))
+
+#looping array elements
+for x in cars:
+  print(x)
+
+#add elements, function: append()
+cars.append("Honda")
+
+#remove element, function: pop()
+cars.pop(1) #remove 2nd element
+
+#using remove()
+cars.remove("BMW")    #only removes first occurence of the value
+print(cars)
+
+#array methods: check docs
+
+#classes and objects
+#A Class is like an object constructor, or a "blueprint" for creating objects
+
+#creating a class
+class MyClass:  #syntax: class className
+  x = 5         #property of the class
+
+#creating an object
+p1 = MyClass()  #syntax: objectName = className()
+print(p1.x)     #access properties using the . operator
+
+#__init__() function
+#__init__() is always executed when a class is being initiated
+#i.e, every time class is being used to create an object
+#use __init__() function to assign values to object properties
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+p1 = Person("John", 36)
+
+print(p1.name)
+print(p1.age)
+
+#The self parameter is a reference to the current instance of the class, and is used to access variables that belongs to the class.
+#it does not need to be called self but it needs to be the first parameter of any function in the class
+#instance of a class means the object of the class
+
+#object methods
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+  def myfunc(self):
+    print("Hello my name is " + self.name)
+
+p1 = Person("John", 36)
+p1.myfunc()
+
+#modify object properties
+p1.age = 20 #Syntax: object.property = newValue
+
+#delete object properties, keyword: del
+del p1.age
+
+#delete object, keyword: del
+del p1
+
+#pass statement
+#classes cannot be empty to create an empty class use pass statement to avoid any error
+class Person:
+  pass
+
+#inheritance
+#Inheritance allows us to define a class that inherits all the methods and properties from another class.
+
+#create a parent class
+class Person:
+    def __init__(self, firstname, lastname):
+        self.firstname = firstname
+        self.lastname = lastname
+
+    def printname(self):
+        print(self.firstname, self.lastname)
+
+x = Person("John", "Doe")
+x.printname()
+
+#create a child class
+#to inherit properties from another parent class pass parent class as a parameter in child class
+class Student(Person):
+    def __init__(self, fname, lname, year):
+        #Person.__init__(self, fname, lname)
+        super().__init__(fname, lname)
+        self.graduationyear = year
+
+    def welcome(self):
+        print("Welcome", self.firstname, self.lastname, "to the class of", self.graduationyear)
+
+
+x = Student("Mike", "Olsen", 2019)
+x.printname()
+x.welcome()
+
+#key points
+#When you add the __init__() function, the child class will no longer inherit the parent's __init__() function
+#The child's __init__() function overrides the inheritance of the parent's __init__() function.
+#To keep the inheritance of the parent's __init__() function, add a call to the parent's __init__() function
+#use parent class name or super() to inherit in child class __init__() function
+#using this you do not have to use the same name of parent element
+#If you add a method in the child class with the same name as a function in the parent class
+#the inheritance of the parent method will be overridden.
+
+#iterators
+#An iterator is an object that contains a countable number of values.
+#Technically, in Python, an iterator is an object which implements the iterator protocol, which consist of the methods __iter__() and __next__().
+#list, tuple etc are iterables. All these objects have a iter() method which is used to get an iterator
+
+mytuple = ("apple", "banana", "cherry")
+myit = iter(mytuple)	#syntax to create an iterator: iteratorName = iter(iterableName)
+
+print(next(myit))
+print(next(myit))
+print(next(myit))
+
+mystr = "banana"
+myit = iter(mystr)
+
+print(next(myit))
+print(next(myit))
+print(next(myit))
+print(next(myit))
+print(next(myit))
+print(next(myit))
+
+#creating an iterator
+class MyNumbers:
+  def __iter__(self):
+    self.a = 1
+    return self
+
+  def __next__(self):
+    if self.a <= 20:
+      x = self.a
+      self.a += 1
+      return x
+    else:
+      raise StopIteration
+
+myclass = MyNumbers()
+myiter = iter(myclass)
+
+for x in myiter:
+  print(x)
+
+#Modules
+#Consider a module to be the same as a code library.
+#A file containing a set of functions you want to include in your application.
+
+#create a module
+#Save this code in a file named mymodule.py
+def greeting(name):
+  print("Hello, " + name)
+
+person1 = {
+  "name": "John",
+  "age": 36,
+  "country": "Norway"
+}
+
+#use a module
+import mymodule
+mymodule.greeting("Jonathan")
+
+#When using a function from a module, use the syntax: module_name.function_name.
+
+#variable in module
+import mymodule
+
+a = mymodule.person1["age"]	#syntax: module_name.variable_name
+print(a)
+
+#naming a module
+#name anything but use extension .py
+
+#renaming a module in code, keyword: as
+import mymodule as mx			#syntax: import moduleName as newName
+
+a = mx.person1["age"]
+print(a)
+
+#dir() function
+#a built-in function to list all the function names (or variable names) in a module.
+import platform
+
+x = dir(platform)
+print(x)
+
+#import from module
+#You can choose to import only parts from a module, by using the from keyword.
+from mymodule import person1
+print (person1["age"])
+
+#When importing using the from keyword, do not use the module name when referring to elements in the module
+
+#built in modules: check docs
+
+#Date time: check docs
+
+#Built in math functions
+#min() and max(): to find lowest and highest in a iterable
+x = min(5, 10, 25)
+y = max(5, 10, 25)
+
+print(x)
+print(y)
+
+#abs(): returns absolute value
+x = abs(-7.25)
+print(x)
+
+#pow()
+#The pow(x, y) function returns the value of x to the power of y (x^y).
+x = pow(4, 3)
+print(x)
+
+#math module: check docs for full list of methods
+import math
+
+#sqrt() in math: to find square root of a number
+x = math.sqrt(64)
+
+#ceil():  rounds a number upwards to its nearest integer
+y = math.ceil(1.4)  #prints: 2
+
+#floor(): rounds a number downwards to its nearest integer
+z = math.floor(1.4) #prints: 1
+
+print(x)
+print(y)
+print(z)
+
+#pi: constant = 3.14
+p = math.pi #prints: 3.141592653589793
+print(p)
+
+#PIP: check docs
+
+#try except
+#The try block lets you test a block of code for errors.
+#The except block lets you handle the error.
+#The finally block lets you execute code, regardless of the result of the try- and except blocks.
+try:
+  print(x)
+except:
+  print("An exception occurred")
+#Since the try block raises an error, the except block will be executed.
+
+#many exceptions based on error type
+try:
+  print(x)
+except NameError:
+  print("Variable x is not defined")
+except:
+  print("Something else went wrong")
+
+#else block if no errors are raised
+try:
+  print("Hello")
+except:
+  print("Something went wrong")
+else:
+  print("Nothing went wrong")
+
+#finally
+#The finally block, if specified, will be executed regardless if the try block raises an error or not.
+try:
+  print(x)
+except:
+  print("Something went wrong")
+finally:
+  print("The 'try except' is finished")
+
+#assert
+#Used to raise an exception but it doesnt handle any error
+#assert (condition resulting in a boolean value), "custom exception"
+ex: assert (temp>=0), "colder than absolute zero"
+
+#raise an exception
+x = -1
+if x < 0:
+  raise Exception("Sorry, no numbers below zero")
+
+#raise defined errors
+x = "hello"
+if not type(x) is int:
+  raise TypeError("Only integers are allowed")
+
+#user input
+username = input("Enter username:")
+print("Username is: " + username)
+
+#file handling
+#The key function for working with files in Python is the open() function.
+#The open() function takes two parameters; filename, and mode.
+
+#modes
+#"r" - Read - Default value. Opens a file for reading, error if the file does not exist
+#"a" - Append - Opens a file for appending, creates the file if it does not exist
+#"w" - Write - Opens a file for writing, creates the file if it does not exist
+#"x" - Create - Creates the specified file, returns an error if the file exists
+
+#additional modes
+#"t" - Text - Default value. Text mode
+#"b" - Binary - Binary mode (e.g. images)
+
+#syntax
+#opening a file
+f = open("demofile.txt")
+
+#same as below since r and t are default values
+f = open("demofile.txt", "rt") #function: open()
+
+#reading a file
+f = open("demofile.txt", "r")
+print(f.read())    #function: read()
+
+#specify the number of characters to be read
+f = open("demofile.txt", "r")
+print(f.read(5))    #5 characters will be read
+
+#read lines line by line using readline()
+#You can return one line by using the readline() method
+f = open("demofile.txt", "r")
+print(f.readline())    #function: readline()
+
+#read multiple lines using readline multiple times
+print(f.readline())
+
+#read entire file using loop
+f = open("demofile.txt", "r")
+for x in f:
+    print(x)
+
+#close files
+f.close()   #function: close()
+
+#write to an existing file
+#To write to an existing file, you must add a parameter to the open() function:
+#"a" - Append - will append to the end of the file
+#"w" - Write - will overwrite any existing content
+
+#append to a file: add to a file
+f = open("demofile.txt", "a")
+f.write("Now the file has more content!")   #function: write()
+f.close()
+
+f = open("demofile.txt", "r")
+print(f.read())
+f.close()
+
+#write to a file: overwrite the file
+f = open("demofile.txt", "w")
+f.write("Woops! I have deleted the content!")
+f.close()
+
+f = open("demofile.txt", "r")
+print(f.read())
+f.close()
+
+#create a new file
+#f = open("myfile.txt", "x")
+
+#also
+#f = open("myfile.txt", "w")    #creates a new file it does not exist
+
+f = open("myfile.txt", "w")
+f.write("Woops! I have created the new content!")
+f.close()
+
+f = open("myfile.txt", "r")
+print(f.read())
+
+#delete a file
+import os
+os.remove("myfile.txt")
+
+#check if the file exists, then delete it
+import os
+if os.path.exists("myfile.txt"):
+  os.remove("myfile.txt")
+else:
+  print("The file does not exist")
+
+#delete an entire folder
+import os
+os.rmdir("myfolder")
+
+#map and filter
+#map and filter are built in function
+#map(): is used to traverse an iteritable		#returns iterator object
+#filter(): is used to filter out some elements
+
+

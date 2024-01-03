@@ -1,0 +1,44 @@
+pwd = present working directory
+
+ls -l = to search file or directory with in specified location.
+
+mkdir <directory name> =  to creare a new directory
+
+cd =  change directory
+
+touch = to create a empty file in directory
+
+cat <file name>= to view the content of selected file or also we use it to concatenate two files into one or another
+
+date = To know the system date
+
+cp <filename which you want to make a copy> < New filename>
+
+mv <filename which you want to make a copy> < New filename>
+
+vi = to create a file enter some content
+
+useradd <user_name> || To add a new user
+
+who | it will give you logged in user
+
+whoami | It will give you from which user you are currently logged in
+
+man ls | to get a full detailed information about your command
+
+wc | To count the lines of any file
+
+rm -rf <filename> | To delete a file forcefully
+
+rmdir <directory name> | To delete directory
+
+df -kh | how much space on disk (disk free)
+
+du -sh | To get how much disk is getting used
+
+ps | to get process id
+
+yum | to install any package
+
+commands with 2 letter 
+wc (Done) | cd (Done) | cp (Done) | mv (Done)| df (Done) | du (Done) | ls (Done) | vi (Done) | rm (Done) | ps

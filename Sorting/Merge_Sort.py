@@ -10,7 +10,6 @@ def merge(arr, low, mid, high):
     arr2 = [0 for _ in range(len(arr))]
 
     while i <= mid and j <= high:
-
         if arr[i] <= arr[j]:
             arr2[k] = arr[i]
             i += 1

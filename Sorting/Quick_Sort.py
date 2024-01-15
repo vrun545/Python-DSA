@@ -3,7 +3,6 @@ def partition(arr, low, high):
     i, j = low, high
 
     while i < j:
-
         while i < high and arr[i] <= arr[pi]:
             i += 1
         

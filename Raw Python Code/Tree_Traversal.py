@@ -53,10 +53,19 @@ node1.left = Node(2)
 node1.right = Node(3)
 node1.left.left = Node(4)
 node1.left.right = Node(5)
+node1.right.left = Node(6)
+node1.right.right = Node(7)
 pre_order(node1)
 print()
 post_order(node1)
 print()
 in_order(node1)
 print("\nTotal No. of Nodes = ", count_nodes(node1))
-print("\nTotal Height of Tree = ", height_of_tree(node1))
+print("Total Height of Tree = ", height_of_tree(node1))
+
+
+    #     1
+    #    / \
+    #   2   3
+    #  / \ / \
+    # 4  5 6  7

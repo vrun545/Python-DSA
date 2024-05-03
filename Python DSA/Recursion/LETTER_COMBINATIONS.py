@@ -1,5 +1,4 @@
 class Solution:
-    
     def solve(self,digits,index,digit_map,output,ans):
         # Base Case
         if index >= len(digits):

@@ -1,8 +1,10 @@
 from abc import ABC, abstractmethod
+
 class AbstractClassExample(ABC):
     @abstractmethod
     def do_something(self):
         print("Some Implementation!!")
+        
 class AnotherSubclass(AbstractClassExample):
     def do_something(self):
         super().do_something()

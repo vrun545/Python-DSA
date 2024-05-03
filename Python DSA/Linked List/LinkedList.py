@@ -23,4 +23,3 @@ if __name__ == "__main__":
     third = Node(15)
     second.next = third
     first.traverseList(list1.head)
-        

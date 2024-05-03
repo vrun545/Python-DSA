@@ -1,15 +1,15 @@
 
 # BINARY TREE TRAVERSAL AND CALCULATE NO. OF NODES AND HEIGHT OR DEPTH
-from msilib.schema import Binary
-#                                     BINARY TREE
+# from msilib.schema import Binary
+#                                   #      BINARY TREE
                                     #             6
                                     #           /    \
                                     #         8        9 
                                     #      /     \   /    \
-                                    # Null      10  13      15
+                                    # NUll      10  13      15
                                     #                      /  \
-                                    #                     /     \
-                                    #                   NULL     17
+                                    #                     /    \
+                                    #                   NULL    17
 class Binary_Tree:
     
     def __init__(self, data):

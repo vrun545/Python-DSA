@@ -1,25 +1,4 @@
-# from email import message
-# from socket import timeout
-# from turtle import title
-# import pyjokes
-# from plyer import notification
-
-# if __name__ == "__main__":
-#     joke = pyjokes.get_jokes('en','all')
-#     notification.notify(
-#         title = "Jokes Time!!!!",
-#         message = "".join(joke),
-#         app_icon = "./logo.ico",
-#         timeout = 10
-#     )
-# import pyttsx3
-# engine = pyttsx3.init()
-# engine.setProperty('rate', 150)
-# engine.say("Hello sir how are you??")
-# engine.runAndWait()
-
 def removeLoop(self, head):
-        
         slow = head
         fast = head
         flag = 0

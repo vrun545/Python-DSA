@@ -25,4 +25,3 @@ if __name__ == "__main__":
     power_set = []
     power_set = subsets(arr, len(arr))
     print(power_set)
-

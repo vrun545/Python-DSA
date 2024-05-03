@@ -24,6 +24,7 @@
 
 # d = {1,2,3,4,5}
 # foo(d)
+
 from abc import ABC, abstractmethod   
 class Car(ABC):
     @abstractmethod
@@ -38,7 +39,6 @@ class Suzuki(Car):
 class Duster(Car):   
      def mileage(self):   
           print("The mileage is 24kmph ")   
-  
 class Renault(Car):   
     def mileage(self):   
             print("The mileage is 27kmph ")   

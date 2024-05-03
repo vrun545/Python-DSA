@@ -11,4 +11,4 @@ if __name__ == "__main__":
     l2 = [1,2,3,4,5]
     reverseString(l1, 0, len(l1)-1)
     reverseString(l2, 0, len(l2)-1)
-    print(l1, l2, end="\n")
+    print(l1, l2)
